@@ -111,48 +111,19 @@
 
     <script>
         document.getElementById('reservationForm').addEventListener('submit', function(event) {
-            // Remove event.preventDefault() to allow native form submission
-            // event.preventDefault(); // Commented out to allow form to submit naturally
+            // Prevent default form submission to handle it client-side
+            event.preventDefault();
 
             const formMessage = document.getElementById('formMessage');
             // Clear any previous messages
             formMessage.textContent = '';
-            formMessage.className = 'mt-4 text-center text-sm font-medium';
+            
+            // Display the demo message
+            formMessage.className = 'mt-4 text-center text-sm font-medium text-green-600';
+            formMessage.textContent = 'Reservation request submitted! (This is a demo, no actual submission occurs.)';
 
-            // The form will now submit directly to process_reservation.php
-            // The JavaScript fetch API example is no longer needed for direct submission
-            // but is kept commented out for reference if you decide to use AJAX later.
-
-            /*
-            // Example of how you would send data via fetch API (AJAX) if you wanted to stay on the same page
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData.entries());
-            console.log('Form Data:', data);
-
-            fetch('process_reservation.php', {
-                method: 'POST',
-                body: JSON.stringify(data), // If sending JSON, ensure your PHP handles JSON input
-                headers: {
-                    'Content-Type': 'application/json' // Adjust header based on how PHP expects data
-                }
-            })
-            .then(response => response.json()) // Assuming PHP returns JSON
-            .then(result => {
-                if (result.success) {
-                    formMessage.className = 'mt-4 text-center text-sm font-medium text-green-600';
-                    formMessage.textContent = result.message || 'Reservation successful!';
-                    event.target.reset(); // Clear the form
-                } else {
-                    formMessage.className = 'mt-4 text-center text-sm font-medium text-red-600';
-                    formMessage.textContent = result.message || 'Reservation failed. Please try again.';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                formMessage.className = 'mt-4 text-center text-sm font-medium text-red-600';
-                formMessage.textContent = 'An error occurred. Please try again later.';
-            });
-            */
+            // Optionally clear the form after showing the message
+            event.target.reset();
         });
     </script>
 </body>
