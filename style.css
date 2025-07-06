@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+ 
+ 
+body {
+   font-family: 'Quicksand', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+ 
+main {
+   padding: 20px;
+   overflow: auto;
+ }
+
+h2, h3 {
+   color: #0554F2
+}
+
+#Home {
+   text-align: justify;
+}
+
+#pcc {
+   text-align: center;
+}
+
+#Facility {
+   text-align: center;
+}
+
+header {
+   display: inline;
+}
+
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #0554F2;
+   text-align: center;
+   font-weight: bold;
+}
+
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
+
+nav a:hover {
+   font-weight: bold;
+}
+
+.profile header {
+   text-align: center;
+}
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+
+.profile img {
+   width: 200px;
+}
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+.card2 {
+   text-align: center;
+   color: white;
+   background-color: #0554F2;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 25px;
+   padding: 20px;
+   margin-top: 20px;
+   size: 30px;
+   margin-left: 250px;
+   margin-right: 250px;
+}
+
+#book {
+   color: white;
+   text-align: center;
+}
+
+.jumbotron {
+   font-size: 20px;
+   padding: 20px;
+   background-color: #0554F2;
+   text-align: center;
+   color: white;
+}
+
+#title {
+   margin-bottom: 0px;
+}
+
+#tagline {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 20px;
+}
+
+nav {
+   background-color: #0554F2;
+   padding: 5px;
+   position: sticky;
+   top: 0;
+}
+
+#content {
+   margin-left: 10%;
+   margin-right: 10%;
+   width: auto;
+ }
+
+ .btn {
+   font-size: 30px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+ }
+
+.btn:hover {
+   font-weight: bold;
+}
+
+ * {
+   box-sizing: border-box;
+ }
+
+ @media screen and (max-width: 1000px) {
+   #content {
+       width: 100%;
+       padding: 0;
+   }
+}

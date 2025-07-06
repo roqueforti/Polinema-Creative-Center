@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\Users\\user\\Documents\\Coolyeah\\SMT 4\\SistemBerbasisPengetahuan"
+		},
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Users\\user\\Documents\\Coolyeah\\SMT 4\\PBO"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PemrogramanWeb"
+	}
+}
