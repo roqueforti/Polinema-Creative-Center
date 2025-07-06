@@ -20,7 +20,7 @@
     <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Reservation Form</h1>
 
-        <form id="reservationForm" class="space-y-4">
+        <form id="reservationForm" class="space-y-4" action="process_reservation.php" method="POST">
             <!-- Name Input -->
             <div>
                 <label for="name" class="block text-blue-700 text-sm font-medium mb-1">Name:</label>
@@ -111,27 +111,32 @@
 
     <script>
         document.getElementById('reservationForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+            // Remove event.preventDefault() to allow native form submission
+            // event.preventDefault(); // Commented out to allow form to submit naturally
 
             const formMessage = document.getElementById('formMessage');
-            formMessage.className = 'mt-4 text-center text-sm font-medium text-green-600';
-            formMessage.textContent = 'Reservation request submitted! (This is a demo, no actual submission occurs.)';
+            // Clear any previous messages
+            formMessage.textContent = '';
+            formMessage.className = 'mt-4 text-center text-sm font-medium';
 
-            // You would typically send the form data to a server here using fetch API
-            // Example:
+            // The form will now submit directly to process_reservation.php
+            // The JavaScript fetch API example is no longer needed for direct submission
+            // but is kept commented out for reference if you decide to use AJAX later.
+
             /*
+            // Example of how you would send data via fetch API (AJAX) if you wanted to stay on the same page
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData.entries());
             console.log('Form Data:', data);
 
             fetch('process_reservation.php', {
                 method: 'POST',
-                body: JSON.stringify(data),
+                body: JSON.stringify(data), // If sending JSON, ensure your PHP handles JSON input
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json' // Adjust header based on how PHP expects data
                 }
             })
-            .then(response => response.json())
+            .then(response => response.json()) // Assuming PHP returns JSON
             .then(result => {
                 if (result.success) {
                     formMessage.className = 'mt-4 text-center text-sm font-medium text-green-600';
